@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Comparable.swift
 //  
 //
 //  Created by Melvin Gundlach on 21.01.21.
