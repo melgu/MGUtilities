@@ -8,15 +8,12 @@
 import Foundation
 import SwiftUI
 
-#if os(macOS)
-
-@available(OSX 10.13, *)
 enum Pasteboard {
 	static func copy(string: String) {
-		let pb = NSPasteboard.init(name: NSPasteboard.Name.general)
-		pb.declareTypes([.string], owner: nil)
-		pb.setString(string, forType: .string)
+		#if canImport(UIKit)
+		UIPasteboard.general.string = string
+		#else
+		NSPasteboard.general.setString(string, forType: .string)
+		#endif
 	}
 }
-
-#endif
