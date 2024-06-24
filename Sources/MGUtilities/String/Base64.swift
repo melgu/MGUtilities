@@ -8,7 +8,7 @@
 import Foundation
 
 public extension String {
-	func base64Encoded(options: Data.Base64EncodingOptions = []) -> String? {
-		data(using: .utf8)?.base64EncodedString(options: options)
+	func base64Encoded(options: Data.Base64EncodingOptions = []) -> String {
+		Data(self.utf8).base64EncodedString(options: options)
 	}
 }
