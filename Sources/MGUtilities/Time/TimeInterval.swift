@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension TimeInterval {
+public extension TimeInterval {
 	func secondsToHoursMinutesSecondsString() -> String {
 		let formatter = DateComponentsFormatter()
 		formatter.allowedUnits = [.hour, .minute, .second]
