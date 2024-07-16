@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-enum Pasteboard {
-	static func copy(string: String) {
+public enum Pasteboard {
+	public static func copy(string: String) {
 		#if canImport(UIKit)
 		UIPasteboard.general.string = string
 		#else
