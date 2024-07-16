@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
 	func matchingStrings(regex: String) -> [[String]] {
 		guard let regex = try? NSRegularExpression(pattern: regex, options: []) else { return [] }
 		let nsString = NSString(string: self)
